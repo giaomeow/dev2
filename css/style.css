@@ -1,0 +1,526 @@
+:root {
+  --syntax-background-color: #08090a;
+  --syntax-text-color: #f8f8f2;
+  --syntax-comment-color: #808080;
+  --syntax-declaration-color: #f39c12;
+  --syntax-literal-color: #dda0dd;
+  --syntax-error-color: #f9690e;
+  --syntax-name-color: #7ed07e;
+  --syntax-string-color: #f2ca27;
+}
+
+.highlight .hll {
+  background-color: #49483e;
+}
+
+.highlight {
+  background: #08090a;
+  background: var(--syntax-background-color);
+  color: #f8f8f2;
+  color: var(--syntax-text-color);
+}
+
+.highlight .c {
+  color: #808080;
+  color: var(--syntax-comment-color);
+}
+
+.highlight .err {
+  text-shadow: 0 0 7px #f9690e;
+  text-shadow: 0 0 7px var(--syntax-error-color);
+}
+
+.highlight .k {
+  color: #f39c12;
+  color: var(--syntax-declaration-color);
+}
+
+.highlight .l {
+  color: #dda0dd;
+  color: var(--syntax-literal-color);
+}
+
+.highlight .n {
+  color: #f8f8f2;
+  color: var(--syntax-text-color);
+}
+
+.highlight .o {
+  color: #f9690e;
+  color: var(--syntax-error-color);
+}
+
+.highlight .p {
+  color: #f8f8f2;
+  color: var(--syntax-text-color);
+}
+
+.highlight .ch {
+  color: #808080;
+  color: var(--syntax-comment-color);
+}
+
+.highlight .cm {
+  color: #808080;
+  color: var(--syntax-comment-color);
+}
+
+.highlight .cp {
+  color: #808080;
+  color: var(--syntax-comment-color);
+}
+
+.highlight .cpf {
+  color: #808080;
+  color: var(--syntax-comment-color);
+}
+
+.highlight .c1 {
+  color: #808080;
+  color: var(--syntax-comment-color);
+}
+
+.highlight .cs {
+  color: #808080;
+  color: var(--syntax-comment-color);
+}
+
+.highlight .gd {
+  color: #f9690e;
+  color: var(--syntax-error-color);
+}
+
+.highlight .ge {
+  font-style: italic;
+}
+
+.highlight .gi {
+  color: #7ed07e;
+  color: var(--syntax-name-color);
+}
+
+.highlight .gs {
+  font-weight: 700;
+  font-weight: var(--fw-bold);
+}
+
+.highlight .gu {
+  color: #808080;
+  color: var(--syntax-comment-color);
+}
+
+.highlight .kc {
+  color: #f39c12;
+  color: var(--syntax-declaration-color);
+}
+
+.highlight .kd {
+  color: #f39c12;
+  color: var(--syntax-declaration-color);
+}
+
+.highlight .kn {
+  color: #f9690e;
+  color: var(--syntax-error-color);
+}
+
+.highlight .kp {
+  color: #f39c12;
+  color: var(--syntax-declaration-color);
+}
+
+.highlight .kr {
+  color: #f39c12;
+  color: var(--syntax-declaration-color);
+}
+
+.highlight .kt {
+  color: #f39c12;
+  color: var(--syntax-declaration-color);
+}
+
+.highlight .ld {
+  color: #f2ca27;
+  color: var(--syntax-string-color);
+}
+
+.highlight .m {
+  color: #dda0dd;
+  color: var(--syntax-literal-color);
+}
+
+.highlight .s {
+  color: #f2ca27;
+  color: var(--syntax-string-color);
+}
+
+.highlight .na {
+  color: #7ed07e;
+  color: var(--syntax-name-color);
+}
+
+.highlight .nb {
+  color: #f8f8f2;
+  color: var(--syntax-text-color);
+}
+
+.highlight .nc {
+  color: #7ed07e;
+  color: var(--syntax-name-color);
+}
+
+.highlight .no {
+  color: #f39c12;
+  color: var(--syntax-declaration-color);
+}
+
+.highlight .nd {
+  color: #7ed07e;
+  color: var(--syntax-name-color);
+}
+
+.highlight .ni {
+  color: #f8f8f2;
+  color: var(--syntax-text-color);
+}
+
+.highlight .ne {
+  color: #7ed07e;
+  color: var(--syntax-name-color);
+}
+
+.highlight .nf {
+  color: #7ed07e;
+  color: var(--syntax-name-color);
+}
+
+.highlight .nl {
+  color: #f8f8f2;
+  color: var(--syntax-text-color);
+}
+
+.highlight .nn {
+  color: #f8f8f2;
+  color: var(--syntax-text-color);
+}
+
+.highlight .nx {
+  color: #7ed07e;
+  color: var(--syntax-name-color);
+}
+
+.highlight .py {
+  color: #f8f8f2;
+  color: var(--syntax-text-color);
+}
+
+.highlight .nt {
+  color: #f9690e;
+  color: var(--syntax-error-color);
+}
+
+.highlight .nv {
+  color: #f8f8f2;
+  color: var(--syntax-text-color);
+}
+
+.highlight .ow {
+  color: #f9690e;
+  color: var(--syntax-error-color);
+}
+
+.highlight .w {
+  color: #f8f8f2;
+  color: var(--syntax-text-color);
+}
+
+.highlight .mb {
+  color: #dda0dd;
+  color: var(--syntax-literal-color);
+}
+
+.highlight .mf {
+  color: #dda0dd;
+  color: var(--syntax-literal-color);
+}
+
+.highlight .mh {
+  color: #dda0dd;
+  color: var(--syntax-literal-color);
+}
+
+.highlight .mi {
+  color: #dda0dd;
+  color: var(--syntax-literal-color);
+}
+
+.highlight .mo {
+  color: #dda0dd;
+  color: var(--syntax-literal-color);
+}
+
+.highlight .sa {
+  color: #f2ca27;
+  color: var(--syntax-string-color);
+}
+
+.highlight .sb {
+  color: #f2ca27;
+  color: var(--syntax-string-color);
+}
+
+.highlight .sc {
+  color: #f2ca27;
+  color: var(--syntax-string-color);
+}
+
+.highlight .dl {
+  color: #f2ca27;
+  color: var(--syntax-string-color);
+}
+
+.highlight .sd {
+  color: #f2ca27;
+  color: var(--syntax-string-color);
+}
+
+.highlight .s2 {
+  color: #f2ca27;
+  color: var(--syntax-string-color);
+}
+
+.highlight .se {
+  color: #dda0dd;
+  color: var(--syntax-literal-color);
+}
+
+.highlight .sh {
+  color: #f2ca27;
+  color: var(--syntax-string-color);
+}
+
+.highlight .si {
+  color: #f2ca27;
+  color: var(--syntax-string-color);
+}
+
+.highlight .sx {
+  color: #f2ca27;
+  color: var(--syntax-string-color);
+}
+
+.highlight .sr {
+  color: #f2ca27;
+  color: var(--syntax-string-color);
+}
+
+.highlight .s1 {
+  color: #f2ca27;
+  color: var(--syntax-string-color);
+}
+
+.highlight .ss {
+  color: #f2ca27;
+  color: var(--syntax-string-color);
+}
+
+.highlight .bp {
+  color: #f8f8f2;
+  color: var(--syntax-text-color);
+}
+
+.highlight .fm {
+  color: #7ed07e;
+  color: var(--syntax-name-color);
+}
+
+.highlight .vc {
+  color: #f8f8f2;
+  color: var(--syntax-text-color);
+}
+
+.highlight .vg {
+  color: #f8f8f2;
+  color: var(--syntax-text-color);
+}
+
+.highlight .vi {
+  color: #f8f8f2;
+  color: var(--syntax-text-color);
+}
+
+.highlight .vm {
+  color: #f8f8f2;
+  color: var(--syntax-text-color);
+}
+
+.highlight .il {
+  color: #dda0dd;
+  color: var(--syntax-literal-color);
+}
+
+:root {
+  --ff-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  --ff-monospace: "SF Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+    Courier, monospace;
+  --card-secondary-border: rgba(var(--grey-900), 0.05);
+  --content-rhythm: var(--content-font-size);
+  --fs-xl: 1.25rem;
+  --radius: 0.375rem;
+  --radius-large: 0.75rem;
+  --code-inline-bg: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ff-sans-serif);
+  background-color: gainsboro;
+  line-height: 1.5;
+}
+
+article {
+  max-width: 876px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px var(--card-secondary-border);
+  border-radius: 8px;
+  overflow-wrap: break-word;
+}
+
+.article-wrapper {
+  padding: 2rem 4rem;
+}
+.article-wrapper .article-header .author {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.article-wrapper .article-header .author .author-avatar img {
+  width: 2.5rem;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.article-wrapper .article-header .author .info .author-name {
+  display: inline-block;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+}
+.article-wrapper .article-header .author .info .author-name:hover {
+  color: rgb(65, 88, 163);
+}
+.article-wrapper .article-header .author .info .public-date {
+  font-size: 0.75rem;
+  color: #717171;
+}
+.article-wrapper .article-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #171717;
+}
+.article-wrapper .article-header .tags {
+  display: flex;
+  gap: 0.5rem;
+}
+.article-wrapper .article-header .tags a {
+  color: #404040;
+  text-decoration: unset;
+  padding: 0.25rem 0.5rem;
+  background-color: transparent;
+  border-radius: 0.375rem;
+  border: 0.5px solid transparent;
+}
+.article-wrapper .article-header .tags a span {
+  color: purple;
+}
+.article-wrapper .article-header .tags a:hover {
+  background-color: rgba(128, 0, 128, 0.144);
+  border: 0.5px solid purple;
+}
+.article-wrapper .article-main {
+  margin-top: 2rem;
+  color: rgb(23, 23, 23);
+  font-size: 1.25rem;
+}
+.article-wrapper .article-main pre,
+.article-wrapper .article-main code,
+.article-wrapper .article-main kbd,
+.article-wrapper .article-main samp {
+  font-family: "SF Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: var(--ff-monospace);
+  font-size: 1em;
+}
+.article-wrapper .article-main code {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0.375rem;
+  border-radius: var(--radius);
+  max-width: 100%;
+  font-size: 80%;
+  padding: 0.1em 0.25em;
+}
+.article-wrapper .article-main .highlight {
+  background: #08090a;
+  background: var(--syntax-background-color);
+  color: #f8f8f2;
+  color: var(--syntax-text-color);
+}
+.article-wrapper .article-main div.highlight {
+  background: #08090a;
+  background: var(--syntax-background-color);
+  color: #f8f8f2;
+  color: var(--syntax-text-color);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-wrap: initial;
+  margin-bottom: 1.25rem;
+}
+.article-wrapper .article-main p {
+  margin-bottom: 1.25rem;
+  line-height: 1.5rem;
+}
+.article-wrapper .article-main p code {
+  background: rgba(0, 0, 0, 0.1);
+  background: var(--code-inline-bg);
+}
+.article-wrapper .article-main hr {
+  width: 25%;
+  opacity: 0.1;
+  margin: calc(var(--content-rhythm) * 2) auto;
+  height: 4px;
+  background-color: gray;
+}
+.article-wrapper .article-main h2 {
+  font-size: 1.875rem;
+  line-height: 1.25;
+  margin: 0.625rem 0;
+}
+.article-wrapper .article-main h3 {
+  margin: 0.625rem 0;
+  line-height: 1.25;
+  font-size: 1.5625rem;
+}
+.article-wrapper .article-main ul,
+.article-wrapper .article-main ol {
+  padding-left: 1.5rem;
+  margin: 0 0 var(--content-font-size);
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --content-font-size: var(--fs-xl);
+  }
+}

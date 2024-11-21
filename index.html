@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article Page</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <article>
+      <div class="article-wrapper">
+        <header class="article-header">
+          <!-- author info -->
+          <div class="author">
+            <div class="author-avatar">
+              <a href="/">
+                <img
+                  src="https://media2.dev.to/dynamic/image/width=50,height=50,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F24763%2F1c045d77-5efa-4969-af1b-787bb993443c.png"
+                  alt="Adam Marsden"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </div>
+            <div class="info">
+              <a class="author-name" href="/">Adam Marsden</a>
+              <p class="public-date">Posted on 16 thg 10</p>
+            </div>
+          </div>
+          <h1>Mastering Currying in JavaScript 🌟</h1>
+          <div class="tags">
+            <a href="/"><span>#</span>webdev</a>
+            <a href="/"><span>#</span>css</a>
+            <a href="/"><span>#</span>design</a>
+            <a href="/"><span>#</span>ux</a>
+          </div>
+        </header>
+        <main class="article-main">
+          <p>
+            <code>JavaScript</code> is filled with cool features, and one of the
+            most mind-blowing concepts is <strong>currying</strong>. Don’t worry
+            if it sounds fancy—by the end of this blog, you’ll not only
+            understand currying but also be able to impress your developer
+            buddies! 💻🔥
+          </p>
+
+          <hr />
+
+          <h2>
+            <a name="what-is-currying" href="#what-is-currying"> </a>
+            🧐 What is Currying?
+          </h2>
+
+          <p>
+            Currying is a way to
+            <strong
+              >transform a function with multiple arguments into a sequence of
+              functions</strong
+            >, each taking a single argument. It’s like serving a meal one dish
+            at a time instead of all at once! 🍽️
+          </p>
+
+          <p>Read this once again !!</p>
+
+          <hr />
+
+          <h3>
+            <a name="why-use-currying" href="#why-use-currying"> </a>
+            🍰 Why Use Currying?
+          </h3>
+
+          <ol>
+            <li>
+              <strong>Reusability:</strong> You can create specialized versions
+              of functions.
+            </li>
+            <li>
+              <strong>Readability:</strong> Makes your code look cleaner and
+              more modular.
+            </li>
+            <li>
+              <strong>Functional Programming Vibes:</strong> Functional
+              programming fans 💛 currying.
+            </li>
+          </ol>
+
+          <hr />
+
+          <h2>
+            <a name="examples" href="#examples"> </a>
+            🚀 Examples
+          </h2>
+
+          <p>Let’s jump straight into some examples:</p>
+
+          <h3>
+            <a name="basic-example" href="#basic-example"> </a>
+            Basic Example
+          </h3>
+
+          <div class="highlight js-code-highlight">
+            <pre
+              class="highlight javascript"
+            ><code><span class="c1">// Normal function</span>
+<span class="kd">function</span> <span class="nf">add</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span> <span class="c1">// 5</span>
+
+<span class="c1">// Curried version</span>
+<span class="kd">function</span> <span class="nf">curriedAdd</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nf">function </span><span class="p">(</span><span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">curriedAdd</span><span class="p">(</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">));</span> <span class="c1">// 5</span>
+</code></pre>
+            <div class="highlight__panel js-actions-panel">
+              <div class="highlight__panel-action js-fullscreen-code-action">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  class="highlight-action crayons-icon highlight-action--fullscreen-on"
+                >
+                  <title>Enter fullscreen mode</title>
+                  <path
+                    d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"
+                  ></path>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  class="highlight-action crayons-icon highlight-action--fullscreen-off"
+                >
+                  <title>Exit fullscreen mode</title>
+                  <path
+                    d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            🎉 <strong>Boom!</strong> Now you can call
+            <code>curriedAdd(2)</code> and get a reusable function to add 2 to
+            anything!<br />
+          </p>
+
+          <div class="highlight js-code-highlight">
+            <pre
+              class="highlight javascript"
+            ><code><span class="kd">const</span> <span class="nx">add2</span> <span class="o">=</span> <span class="nf">curriedAdd</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">add2</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span> <span class="c1">// 7</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">add2</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span> <span class="c1">// 12</span>
+</code></pre>
+            <div class="highlight__panel js-actions-panel">
+              <div class="highlight__panel-action js-fullscreen-code-action">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  class="highlight-action crayons-icon highlight-action--fullscreen-on"
+                >
+                  <title>Enter fullscreen mode</title>
+                  <path
+                    d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"
+                  ></path>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  class="highlight-action crayons-icon highlight-action--fullscreen-off"
+                >
+                  <title>Exit fullscreen mode</title>
+                  <path
+                    d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <h3>
+            <a
+              name="currying-with-arrow-functions"
+              href="#currying-with-arrow-functions"
+            >
+            </a>
+            Currying with Arrow Functions 🏹
+          </h3>
+
+          <p>Who doesn’t love short, clean arrow functions?<br /></p>
+
+          <div class="highlight js-code-highlight">
+            <pre
+              class="highlight javascript"
+            ><code><span class="kd">const</span> <span class="nx">multiply</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">multiply</span><span class="p">(</span><span class="mi">3</span><span class="p">)(</span><span class="mi">4</span><span class="p">));</span> <span class="c1">// 12</span>
+
+<span class="c1">// Make a multiplier of 3</span>
+<span class="kd">const</span> <span class="nx">triple</span> <span class="o">=</span> <span class="nf">multiply</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">triple</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span> <span class="c1">// 15</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">triple</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span> <span class="c1">// 30</span>
+</code></pre>
+            <div class="highlight__panel js-actions-panel">
+              <div class="highlight__panel-action js-fullscreen-code-action">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  class="highlight-action crayons-icon highlight-action--fullscreen-on"
+                >
+                  <title>Enter fullscreen mode</title>
+                  <path
+                    d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"
+                  ></path>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  class="highlight-action crayons-icon highlight-action--fullscreen-off"
+                >
+                  <title>Exit fullscreen mode</title>
+                  <path
+                    d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <h3>
+            <a name="realworld-example" href="#realworld-example"> </a>
+            Real-World Example 🌐
+          </h3>
+
+          <p>Imagine a filter function for a shopping app:<br /></p>
+
+          <div class="highlight js-code-highlight">
+            <pre
+              class="highlight javascript"
+            ><code><span class="kd">const</span> <span class="nx">filterByCategory</span> <span class="o">=</span> <span class="p">(</span><span class="nx">category</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="nx">product</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">product</span><span class="p">.</span><span class="nx">category</span> <span class="o">===</span> <span class="nx">category</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">products</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Shoes</span><span class="dl">"</span><span class="p">,</span> <span class="na">category</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Fashion</span><span class="dl">"</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Laptop</span><span class="dl">"</span><span class="p">,</span> <span class="na">category</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Electronics</span><span class="dl">"</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">T-shirt</span><span class="dl">"</span><span class="p">,</span> <span class="na">category</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Fashion</span><span class="dl">"</span> <span class="p">},</span>
+<span class="p">];</span>
+
+<span class="kd">const</span> <span class="nx">isFashion</span> <span class="o">=</span> <span class="nf">filterByCategory</span><span class="p">(</span><span class="dl">"</span><span class="s2">Fashion</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">products</span><span class="p">.</span><span class="nf">filter</span><span class="p">(</span><span class="nx">isFashion</span><span class="p">));</span>
+<span class="c1">// Output: [ { name: "Shoes", category: "Fashion" }, { name: "T-shirt", category: "Fashion" } ]</span>
+</code></pre>
+            <div class="highlight__panel js-actions-panel">
+              <div class="highlight__panel-action js-fullscreen-code-action">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  class="highlight-action crayons-icon highlight-action--fullscreen-on"
+                >
+                  <title>Enter fullscreen mode</title>
+                  <path
+                    d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"
+                  ></path>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  class="highlight-action crayons-icon highlight-action--fullscreen-off"
+                >
+                  <title>Exit fullscreen mode</title>
+                  <path
+                    d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <h3>
+            <a
+              name="breaking-down-complex-problems"
+              href="#breaking-down-complex-problems"
+            >
+            </a>
+            Breaking Down Complex Problems 🧩
+          </h3>
+
+          <p>
+            Currying makes it easy to break problems into smaller, manageable
+            parts.<br />
+          </p>
+
+          <div class="highlight js-code-highlight">
+            <pre
+              class="highlight javascript"
+            ><code><span class="kd">const</span> <span class="nx">greet</span> <span class="o">=</span> <span class="p">(</span><span class="nx">greeting</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="s2">`</span><span class="p">${</span><span class="nx">greeting</span><span class="p">}</span><span class="s2">, </span><span class="p">${</span><span class="nx">name</span><span class="p">}</span><span class="s2">!`</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">sayHello</span> <span class="o">=</span> <span class="nf">greet</span><span class="p">(</span><span class="dl">"</span><span class="s2">Hello</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">sayHello</span><span class="p">(</span><span class="dl">"</span><span class="s2">Alice</span><span class="dl">"</span><span class="p">));</span> <span class="c1">// Hello, Alice!</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">sayHello</span><span class="p">(</span><span class="dl">"</span><span class="s2">Bob</span><span class="dl">"</span><span class="p">));</span>   <span class="c1">// Hello, Bob!</span>
+
+<span class="kd">const</span> <span class="nx">sayGoodMorning</span> <span class="o">=</span> <span class="nf">greet</span><span class="p">(</span><span class="dl">"</span><span class="s2">Good Morning</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">sayGoodMorning</span><span class="p">(</span><span class="dl">"</span><span class="s2">Charlie</span><span class="dl">"</span><span class="p">));</span> <span class="c1">// Good Morning, Charlie!</span>
+</code></pre>
+            <div class="highlight__panel js-actions-panel">
+              <div class="highlight__panel-action js-fullscreen-code-action">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  class="highlight-action crayons-icon highlight-action--fullscreen-on"
+                >
+                  <title>Enter fullscreen mode</title>
+                  <path
+                    d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"
+                  ></path>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  class="highlight-action crayons-icon highlight-action--fullscreen-off"
+                >
+                  <title>Exit fullscreen mode</title>
+                  <path
+                    d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <h2>
+            <a
+              name="advanced-currying-with-utility-functions"
+              href="#advanced-currying-with-utility-functions"
+            >
+            </a>
+            🌟 Advanced Currying with Utility Functions
+          </h2>
+
+          <p>
+            Don’t want to manually curry functions? Let’s write a helper
+            function:<br />
+          </p>
+
+          <div class="highlight js-code-highlight">
+            <pre
+              class="highlight javascript"
+            ><code><span class="kd">const</span> <span class="nx">curry</span> <span class="o">=</span> <span class="p">(</span><span class="nx">fn</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(...</span><span class="nx">args</span><span class="p">)</span> <span class="o">=&gt;</span>
+  <span class="nx">args</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="nx">fn</span><span class="p">.</span><span class="nx">length</span>
+      <span class="p">?</span> <span class="nf">fn</span><span class="p">(...</span><span class="nx">args</span><span class="p">)</span>
+      <span class="p">:</span> <span class="nf">curry</span><span class="p">(</span><span class="nx">fn</span><span class="p">.</span><span class="nf">bind</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="p">...</span><span class="nx">args</span><span class="p">));</span>
+
+<span class="c1">// Example:</span>
+<span class="kd">const</span> <span class="nx">sum</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span> <span class="o">+</span> <span class="nx">c</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">curriedSum</span> <span class="o">=</span> <span class="nf">curry</span><span class="p">(</span><span class="nx">sum</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">curriedSum</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">));</span> <span class="c1">// 6</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">curriedSum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">));</span> <span class="c1">// 6</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">curriedSum</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span> <span class="c1">// 6</span>
+</code></pre>
+            <div class="highlight__panel js-actions-panel">
+              <div class="highlight__panel-action js-fullscreen-code-action">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  class="highlight-action crayons-icon highlight-action--fullscreen-on"
+                >
+                  <title>Enter fullscreen mode</title>
+                  <path
+                    d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"
+                  ></path>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  class="highlight-action crayons-icon highlight-action--fullscreen-off"
+                >
+                  <title>Exit fullscreen mode</title>
+                  <path
+                    d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <h2>
+            <a name="tricky-question-time" href="#tricky-question-time"> </a>
+            🤔 Tricky Question Time!
+          </h2>
+
+          <p>Here's a fun one to tease your brain 🧠:<br /></p>
+
+          <div class="highlight js-code-highlight">
+            <pre
+              class="highlight javascript"
+            ><code><span class="kd">const</span> <span class="nx">add</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">b</span> <span class="p">?</span> <span class="nf">add</span><span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">)</span> <span class="p">:</span> <span class="nx">a</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">add</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">)(</span><span class="mi">4</span><span class="p">)());</span> <span class="c1">// ❓</span>
+</code></pre>
+            <div class="highlight__panel js-actions-panel">
+              <div class="highlight__panel-action js-fullscreen-code-action">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  class="highlight-action crayons-icon highlight-action--fullscreen-on"
+                >
+                  <title>Enter fullscreen mode</title>
+                  <path
+                    d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"
+                  ></path>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  class="highlight-action crayons-icon highlight-action--fullscreen-off"
+                >
+                  <title>Exit fullscreen mode</title>
+                  <path
+                    d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <p>What do you think the output is? Share your thoughts below! 👇</p>
+
+          <hr />
+
+          <h2>
+            <a name="wrapping-up" href="#wrapping-up"> </a>
+            🏁 Wrapping Up
+          </h2>
+
+          <p>
+            Currying is a powerful technique that simplifies your code, makes it
+            reusable, and adds a touch of elegance. So, start currying your
+            functions and bring the spice of functional programming to your
+            JavaScript code! 🌶️
+          </p>
+
+          <p>Happy coding! 💻✨</p>
+          <ul style="">
+            <li>
+              <p style="">express: a popular web framework for Node.js</p>
+            </li>
+            <li>
+              <p style="">
+                dotenv: loads environment variables from a
+                <code>.env</code> file.
+              </p>
+            </li>
+            <li>
+              <p style="">googleapis: Provides access to various Google APIs</p>
+            </li>
+          </ul>
+        </main>
+      </div>
+    </article>
+  </body>
+</html>
